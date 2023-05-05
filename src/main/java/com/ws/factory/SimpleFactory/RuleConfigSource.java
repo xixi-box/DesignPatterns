@@ -1,4 +1,4 @@
-package com.ws.Factory.SimpleFactory;
+package com.ws.factory.SimpleFactory;
 
 /**
  * @Author: 王顺
@@ -28,6 +28,7 @@ public class RuleConfigSource {
     }
 
 }
+
 class RuleConfigParserFactory {
     public static IRuleConfigParser createParser(String configFormat) {
         IRuleConfigParser parser = null;
@@ -44,13 +45,20 @@ class RuleConfigParserFactory {
     }
 }
 
+/**
+ * 读取配置信息
+ */
 class RuleConfig {
     String configText;
+
     public RuleConfig(String configText) {
         this.configText = configText;
     }
 }
 
+/**
+ * 各个配置类的统一父类
+ */
 class IRuleConfigParser {
 
     public RuleConfig parse(String configText) {
@@ -73,6 +81,9 @@ class XmlRuleConfigParser extends RuleConfigParser {
 class YamlRuleConfigParser extends RuleConfigParser {
 }
 
+/**
+ * 自定义类型异常
+ */
 class InvalidRuleConfigException extends RuntimeException {
     String message;
 

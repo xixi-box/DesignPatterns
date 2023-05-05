@@ -1,4 +1,4 @@
-package com.ws.Factory.SimpleFactory;
+package com.ws.factory.SimpleFactory;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -13,7 +13,7 @@ public class RuleConfigSourceAndSingleton {
         //1.根据配置路径选择获取扩展名
         String ruleConfigFileExtension = getFileExtension(ruleConfigFilePath);
         //2.创建相对应的工厂实例
-        IRuleConfigParser parser = RuleConfigParserFactory.createParser(ruleConfigFileExtension);
+        IRuleConfigParser parser = RuleConfigParserFactoryAndSingleton.createParser(ruleConfigFileExtension);
         if (parser == null) {
             throw new InvalidRuleConfigException(
                     "Rule config file format is not supported: " + ruleConfigFilePath);
