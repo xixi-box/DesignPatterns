@@ -1,8 +1,7 @@
 package com.ws.builder;
 
+import com.ws.creationType.builder.ResourcePoolConfig;
 import org.junit.Test;
-
-import static org.junit.Assert.*;
 
 /**
  * @Author: 王顺

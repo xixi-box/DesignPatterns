@@ -1,4 +1,4 @@
-package com.ws.singleton;
+package com.ws.creationType.singleton;
 
 import java.util.concurrent.atomic.AtomicLong;
 

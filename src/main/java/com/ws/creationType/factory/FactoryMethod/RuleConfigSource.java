@@ -1,4 +1,4 @@
-package com.ws.factory.FactoryMethod;
+package com.ws.creationType.factory.FactoryMethod;
 
 
 import java.util.HashMap;

@@ -1,4 +1,4 @@
-package com.ws.singleton.Distributed;
+package com.ws.creationType.singleton.Distributed;
 
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicLong;

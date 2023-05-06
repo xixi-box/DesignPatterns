@@ -1,4 +1,4 @@
-package com.ws.builder;
+package com.ws.creationType.builder;
 
 /**
  * @Author: 王顺

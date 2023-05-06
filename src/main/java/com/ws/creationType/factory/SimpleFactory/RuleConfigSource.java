@@ -1,4 +1,4 @@
-package com.ws.factory.SimpleFactory;
+package com.ws.creationType.factory.SimpleFactory;
 
 /**
  * @Author: 王顺

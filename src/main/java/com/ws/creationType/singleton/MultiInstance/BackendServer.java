@@ -1,4 +1,4 @@
-package com.ws.singleton.MultiInstance;
+package com.ws.creationType.singleton.MultiInstance;
 
 import java.util.HashMap;
 import java.util.Map;

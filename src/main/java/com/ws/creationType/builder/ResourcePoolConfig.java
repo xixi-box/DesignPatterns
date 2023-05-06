@@ -1,4 +1,4 @@
-package com.ws.builder;
+package com.ws.creationType.builder;
 
 import org.apache.commons.lang.StringUtils;
 
