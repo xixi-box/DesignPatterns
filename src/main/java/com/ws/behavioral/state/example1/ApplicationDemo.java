@@ -1,4 +1,4 @@
-package com.ws.behavioral.State.example1;
+package com.ws.behavioral.state.example1;
 
 public class ApplicationDemo {
     public static void main(String[] args) {

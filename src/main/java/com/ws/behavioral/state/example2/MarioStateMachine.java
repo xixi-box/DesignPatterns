@@ -1,6 +1,6 @@
-package com.ws.behavioral.State.example2;
+package com.ws.behavioral.state.example2;
 
-import static com.ws.behavioral.State.example2.State.*;
+import static com.ws.behavioral.state.example2.State.*;
 
 /**
  * @Author: 王顺

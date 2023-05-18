@@ -1,6 +1,6 @@
-package com.ws.behavioral.State.example3;
+package com.ws.behavioral.state.example3;
 
-import com.ws.behavioral.State.example2.State;
+import com.ws.behavioral.state.example2.State;
 
 public class SuperMario implements IMario {
     private MarioStateMachine stateMachine;

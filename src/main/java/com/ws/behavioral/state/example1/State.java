@@ -1,4 +1,4 @@
-package com.ws.behavioral.State.example1;
+package com.ws.behavioral.state.example1;
 
 /**
  * @Author: 王顺
