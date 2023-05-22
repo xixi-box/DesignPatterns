@@ -40,7 +40,6 @@ class RuleConfigParserFactoryAndSingleton {
         cachedParsers.put("yaml", new YamlRuleConfigParser());
         cachedParsers.put("properties", new PropertiesRuleConfigParser());
     }
-
     public static IRuleConfigParser createParser(String configFormat) {
         if (configFormat == null || configFormat.isEmpty()) {
             return null;//返回null还是IllegalArgumentException全凭你自己说了算

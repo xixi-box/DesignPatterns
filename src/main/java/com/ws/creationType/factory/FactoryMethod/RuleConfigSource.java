@@ -15,12 +15,13 @@ public class RuleConfigSource {
     public RuleConfig load(String ruleConfigFilePath) {
         //1.根据配置路径选择获取扩展名
         String ruleConfigFileExtension = getFileExtension(ruleConfigFilePath);
-        //2.创建相对应的工厂实例
+        //2.创建相对应的工厂实例  找到相对应的工厂
         IRuleConfigParserFactory parserFactory = RuleConfigParserFactoryMap.getParserFactory(ruleConfigFileExtension);
         if (parserFactory == null) {
             throw new InvalidRuleConfigException(
                     "Rule config file format is not supported: " + ruleConfigFilePath);
         }
+        //
         IRuleConfigParser parser = parserFactory.createParser();
         String configText = "";
         //从ruleConfigFilePath文件中读取配置文本到configText中
@@ -32,7 +33,6 @@ public class RuleConfigSource {
         //...解析文件名获取扩展名，比如rule.json，返回json
         return "json";
     }
-
 }
 
 //因为工厂类只包含方法，不包含成员变量，完全可以复用，
@@ -57,6 +57,9 @@ class RuleConfigParserFactoryMap { //工厂的工厂
 
 }
 
+/**
+ * @Description 总工厂
+ */
 interface IRuleConfigParserFactory {
     IRuleConfigParser createParser();
 }

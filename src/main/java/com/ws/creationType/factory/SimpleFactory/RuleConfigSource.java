@@ -5,19 +5,20 @@ package com.ws.creationType.factory.SimpleFactory;
  * @Date: 2023/5/3 10:58
  * @Version 1.0
  */
+
 public class RuleConfigSource {
 
     public RuleConfig load(String ruleConfigFilePath) {
         //1.根据配置路径选择获取扩展名
         String ruleConfigFileExtension = getFileExtension(ruleConfigFilePath);
-        //2.创建相对应的工厂实例
+        //2.根据扩展名创建相对应的工厂实例
         IRuleConfigParser parser = RuleConfigParserFactory.createParser(ruleConfigFileExtension);
         if (parser == null) {
             throw new InvalidRuleConfigException(
                     "Rule config file format is not supported: " + ruleConfigFilePath);
         }
         String configText = "";
-        //从ruleConfigFilePath文件中读取配置文本到configText中
+        //3.从ruleConfigFilePath文件中读取配置文本到configText中
         RuleConfig ruleConfig = parser.parse(configText);
         return ruleConfig;
     }
@@ -65,6 +66,8 @@ class IRuleConfigParser {
         return new RuleConfig(configText);
     }
 }
+
+
 
 class JsonRuleConfigParser extends RuleConfigParser {
 
